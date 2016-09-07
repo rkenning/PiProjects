@@ -3,7 +3,7 @@ from pydrive.drive import GoogleDrive
 import os
 
 gauth = GoogleAuth()
-gauth.LoadCredentialsFile("mycreds.txt")
+
 drive = GoogleDrive(gauth)
 
 def find_folders(fldname):
@@ -14,11 +14,10 @@ def find_folders(fldname):
 
 
 
-def main():
+def upload(Picture_Name):
  
-    PicsDir = '/Pics/'
-    PicsDir = os.getcwd() + '/Pics/'
-    Pics = os.listdir(PicsDir)
+    gauth.LoadCredentialsFile("mycreds.txt")    
+    print "Uploading Picture : " +Picture_Name
     gpath = 'PiPics'
     file_list1 = find_folders(gpath)
 
@@ -27,19 +26,22 @@ def main():
         if file1['title'] == gpath:
          id = file1['id']
 
-
-    #Loop through pics found and upload
-    for pic in Pics:
-        f = drive.CreateFile({'title':pic, 'mimeType':'image/jpeg', "parents": [{"kind": "drive#fileLink","id": id}]})
-        f.SetContentFile(PicsDir+pic)
-        f.Upload()
-        print('title: %s, mimeType: %s' % (f['title'], f['mimeType']))
-
-        #Remove all the pictures
-        for pic in Pics:
-            os.remove(PicsDir+pic)
-
-        gauth.SaveCredentialsFile("mycreds.txt")
-
-if __name__ == '__main__': main()
+    pic = Picture_Name
     
+    f = drive.CreateFile({'title':pic, 'mimeType':'image/jpeg', "parents": [{"kind": "drive#fileLink","id": id}]})
+    f.SetContentFile(pic)
+    f.Upload()
+    print('title: %s, mimeType: %s' % (f['title'], f['mimeType']))
+    
+    while f.uploaded == False:
+        sleep(1)
+    
+    print "Removing the file : " + pic
+    f = None
+    os.remove(pic)
+    
+    gauth.SaveCredentialsFile("mycreds.txt")
+
+if __name__ == '__main__': 
+    print "Main"
+

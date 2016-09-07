@@ -5,7 +5,7 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>6f25b1e2-5a6a-438d-ae4c-65b8ba956a5b</ProjectGuid>
     <ProjectHome>.</ProjectHome>
-    <StartupFile>gdrive.py</StartupFile>
+    <StartupFile>UnitTest.py</StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
@@ -23,6 +23,9 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="gdrive.py" />
+    <Compile Include="UnitTest.py">
+      <SubType>Code</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Content Include="client_secrets.json" />
