@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "SingingObjects", "SingingObjects\SingingObjects.pyproj", "{FEA3D1CA-923F-496F-9909-E81BFE8FDA8E}"
+EndProject
+Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "ptvsd_test", "ptvsd_test\ptvsd_test.pyproj", "{10A94B6F-41B2-4BF0-BE17-577D7997B7BC}"
+EndProject
+Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "gdrive", "gdrive\gdrive.pyproj", "{6F25B1E2-5A6A-438D-AE4C-65B8BA956A5B}"
+EndProject
+Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "PIR Photos", "PIR Photos\PIR Photos.pyproj", "{A13C986E-A551-4F84-9B9D-BDA9A9D0A8C8}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{FEA3D1CA-923F-496F-9909-E81BFE8FDA8E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FEA3D1CA-923F-496F-9909-E81BFE8FDA8E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{10A94B6F-41B2-4BF0-BE17-577D7997B7BC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{10A94B6F-41B2-4BF0-BE17-577D7997B7BC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6F25B1E2-5A6A-438D-AE4C-65B8BA956A5B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6F25B1E2-5A6A-438D-AE4C-65B8BA956A5B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A13C986E-A551-4F84-9B9D-BDA9A9D0A8C8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A13C986E-A551-4F84-9B9D-BDA9A9D0A8C8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
