@@ -11,6 +11,8 @@ Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "gdrive", "gdrive\gdrive.pyp
 EndProject
 Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "PIR Photos", "PIR Photos\PIR Photos.pyproj", "{A13C986E-A551-4F84-9B9D-BDA9A9D0A8C8}"
 EndProject
+Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "AzureIoT", "AzureIoT\AzureIoT.pyproj", "{FC0955D6-1715-44E7-9587-E76FF144F528}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -25,6 +27,8 @@ Global
 		{6F25B1E2-5A6A-438D-AE4C-65B8BA956A5B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A13C986E-A551-4F84-9B9D-BDA9A9D0A8C8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{A13C986E-A551-4F84-9B9D-BDA9A9D0A8C8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FC0955D6-1715-44E7-9587-E76FF144F528}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FC0955D6-1715-44E7-9587-E76FF144F528}.Release|Any CPU.ActiveCfg = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

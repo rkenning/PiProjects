@@ -249,3 +249,5 @@ ModelManifest.xml
 /PiProjects/gdrive/mycreds.txt
 /PiProjects/gdrive/settings.ymal
 /PiProjects/gdrive/client_secrets.json
+/PiProjects/AzureIoT/ConnectionDetails.py
+/PiProjects/AzureIoT/ConnectionDetails.pyc
