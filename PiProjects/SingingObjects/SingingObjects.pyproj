@@ -5,7 +5,7 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>fea3d1ca-923f-496f-9909-e81bfe8fda8e</ProjectGuid>
     <ProjectHome>.</ProjectHome>
-    <StartupFile>SingingObjects.py</StartupFile>
+    <StartupFile>unittest.py</StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
@@ -23,6 +23,12 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="SingingObjects.py" />
+    <Compile Include="sounds.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="unittest.py">
+      <SubType>Code</SubType>
+    </Compile>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

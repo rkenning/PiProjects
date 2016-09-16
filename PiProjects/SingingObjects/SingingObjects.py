@@ -1,48 +1,54 @@
-import ptvsd
-ptvsd.enable_attach(secret='123567')
+#import ptvsd
+#ptvsd.enable_attach(secret='123567')
 
 import time
-import pygame.mixer
+import sounds as sd
 import RPi.GPIO as GPIO
+from sounds import sounds
 
 GPIO.setmode(GPIO.BCM)
 
-pygame.mixer.init(48000, -16, 1, 1024)
-soundChannelList = [None] * 12
-soundList = [None] * 12
-
-sound1 = pygame.mixer.Sound("Spoon.wav")
-soundChannel1 = pygame.mixer.Channel(1)
-soundList[0] = sound1
-soundChannelList[0] = soundChannel1
-
-sound2 = pygame.mixer.Sound("Banana.wav")
-soundChannel2 = pygame.mixer.Channel(2)
-soundList[2] = sound2
-soundChannelList[1] = soundChannel2
-
-sound3 = pygame.mixer.Sound("Fork.wav")
-soundChannel3 = pygame.mixer.Channel(3)
-soundList[3] = sound3
-soundChannelList[3] = soundChannel3
-
-padPin = 17
-GPIO.setup(padPin, GPIO.IN)
 
 
-alreadyPressed = False
+GPIO.setup(17, GPIO.IN, pull_up_down=GPIO.PUD_UP)
+GPIO.setup(18, GPIO.IN, pull_up_down=GPIO.PUD_UP)
+GPIO.setup(27, GPIO.IN, pull_up_down=GPIO.PUD_UP)
+GPIO.setup(22, GPIO.IN, pull_up_down=GPIO.PUD_UP)
+GPIO.setup(23, GPIO.IN, pull_up_down=GPIO.PUD_UP)
 
-while True:
-    print "started"
 
-    padPressed =  GPIO.input(padPin)
+def callBack(channel):
+    print channel
+    if channel == 17:
+        sd.play_sound(0)
+    if channel == 18:
+        sd.play_sound(1)
+    if channel == 27:
+        sd.play_sound(2)
+    if channel == 22:
+        sd.play_sound(3)
+    if channel == 23:
+        sd.play_sound(4)
 
-    if padPressed and not alreadyPressed:
-        print "pressed"
-        soundChannel = soundChannelList[0]
-        sound = soundList[0]
-        soundChannel.play(sound)
 
-    alreadyPressed = padPressed
-    time.sleep(0.1)
 
+def main():
+    GPIO.add_event_detect(17,   GPIO.RISING, callback=callBack,   bouncetime=500)
+    GPIO.add_event_detect(18,   GPIO.RISING, callback=callBack,   bouncetime=500)
+    GPIO.add_event_detect(27,   GPIO.RISING, callback=callBack,   bouncetime=500)
+    GPIO.add_event_detect(22,   GPIO.RISING, callback=callBack,   bouncetime=500)
+    GPIO.add_event_detect(23,   GPIO.RISING, callback=callBack,   bouncetime=500)
+
+
+
+    print "Running"
+    
+    try:
+        raw_input()
+    except KeyboardInterrupt:
+        GPIO.cleanup()
+
+    GPIO.cleanup()
+
+if __name__ == "__main__":
+    main()
