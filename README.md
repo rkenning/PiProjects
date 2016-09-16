@@ -1,2 +1,2 @@
 # PiProjects
-Collection of Python Pi Projects
+Collection of Python Projects mainly developed for use with my Raspberry Pi's
