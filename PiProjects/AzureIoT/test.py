@@ -23,7 +23,7 @@ blob_callbacks = 0
 
 # chose HTTP, AMQP or MQTT as transport protocol
 protocol = IoTHubTransportProvider.AMQP
-connection_string = "HostName=RKTestHub1.azure-devices.net;DeviceId=PiDevice1;SharedAccessKey=/GEaOlNvAcBdgNF4sSdp+3nMk2V1pnXCZ08gyEK2HYI=;GatewayHostName=ssl://RKITITO.azure-devices.net:8883"
+connection_string = "[Connection String]"
 
 
 
